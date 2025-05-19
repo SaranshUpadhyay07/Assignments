@@ -67,7 +67,7 @@ $("#smtbtn").click(function () {
 
 $("#read").click(function () {
     $("#unsuccessful").addClass("undo");
-    $("read").addClass("undo");
+    $("#read").addClass("undo");
     $("#emailpara").removeClass("undo");
     $("#phonepara").removeClass("undo");
     $("#passwordpara").removeClass("undo");
