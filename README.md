@@ -22,7 +22,7 @@ This project tests the user's reaction speed with a fun and interactive interfac
 
 ---
 
-## 🕹📝 Assignment 3: Form Validation Project
+## 📝 Assignment 3: Form Validation Project
 
 **Description:**  
 This is a responsive front-end webpage designed and developed by Saransh as part of a web development assignment. The site demonstrates proficiency in HTML5, CSS3, and modern layout techniques including Flexbox and responsive media queries. It features a clean and user-friendly interface with structured content sections, a fixed navigation bar, and smooth scrolling functionality. The project emphasizes aesthetic design, accessibility, and responsive behavior across devices, showcasing Saransh's foundational skills in front-end web development.
