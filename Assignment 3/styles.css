@@ -1,0 +1,43 @@
+body{
+    text-align:center;
+    background-color: #b3b3b5;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    margin:0 auto;
+    height: 500px;
+    width: 500px;
+    border: 2px solid;
+    border-radius: 40px;
+}
+
+#togglePassword{
+    cursor:pointer;
+    
+}
+p{
+ color: rgb(159, 28, 28);   
+}
+
+#successful{
+    color: green;
+    font-size: 20px;
+}
+#unsuccessful{
+    color: rgb(159, 28, 28);
+    font-size: 20px;
+}
+
+.notvalid{
+    text-decoration: underline;
+    text-decoration-color: rgb(159, 28, 28);
+    text-decoration-thickness: 2px;
+}
+#read{
+    cursor:pointer;
+}
+
+.undo{
+    display: none;
+}
