@@ -11,3 +11,7 @@ body{
     border-radius: 5%;
     position: absolute;
 }
+.container{
+    text-align: center;
+    width: 100%;
+}
