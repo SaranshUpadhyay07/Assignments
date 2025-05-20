@@ -1,17 +1,35 @@
-body{
+body {
     background-color: #adddcd;
     font-family: 'Poppins', sans-serif;
     color: rgb(0, 7, 4);
+    margin: 0; /* remove default margin */
+    height: 100vh;
+    overflow-x: hidden; /* prevent horizontal scroll */
+    position: relative;
 }
 
-#tester{
-    width:200px;
-    height:200px;
-    background-color: #f0f0f0;
-    border-radius: 5%;
-    position: absolute;
-}
-.container{
+.container {
+    position: fixed; /* fixed so it stays at top center */
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     width: 100%;
+    max-width: 400px;
+    background-color: #fffbcc;  /* light alert-like background */
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+
+#tester {
+    width: 150px;
+    height: 150px;
+    background-color: #f0f0f0;
+    border-radius: 10%;
+    position: absolute;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease, top 0.3s ease;
 }

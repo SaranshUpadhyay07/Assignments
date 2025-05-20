@@ -18,7 +18,7 @@ var start = new Date().getTime();
                 alert("You are too fast");
             }
             else{
-                alert("Your reaction time is " + timeTake + " seconds");
+                alert("Your reaction time is " + timeTake.toFixed(2) + " seconds");
             }
             move();
         }
