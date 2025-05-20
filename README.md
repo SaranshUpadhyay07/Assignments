@@ -32,3 +32,21 @@ This is a responsive front-end webpage designed and developed by Saransh as part
 ---)
 
 ---
+
+## 🚀 Assignment 4: App Landing page Project
+
+**Description:**  
+A modern, responsive landing page for showcasing a mobile or web application — built using **Bootstrap 5.3**.
+
+## 🛠️ Features
+
+- ✅ **Bootstrap 5.3** with responsive grid
+- ✅ **Fixed Navbar** with Scrollspy support
+- ✅ **Jumbotron Hero Section**
+- ✅ **Feature Cards Section**
+- ✅ **Footer with Download CTA**
+- ✅ Fully customizable and lightweight
+
+🔗 **Live Demo:** [Visit Site](https://saranshassigment4.netlify.app)
+
+---
