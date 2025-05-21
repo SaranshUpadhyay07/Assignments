@@ -1,0 +1,237 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    background-color:white;
+    color: #939393;
+    font-family: nunito;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility
+}
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+header{
+    background-image:linear-gradient(rgba(0,0,0,0.6)), url("img/healthy food.webp");
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.hero-text-box{
+    margin-top: 0px;
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color:rgb(179, 182, 184)
+}
+
+h1{
+    margin-top:0;
+    margin-bottom:20px;
+    color:rgb(216, 220, 220);
+    font-size:240%;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 3px;
+}
+
+.btns:link,
+.btns:visited{
+    display:inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight:300; 
+    transition:background-color 0.2s, border 0.2s, color 0.2s;
+}
+
+.btns-full:link,
+.btns-full:visited{
+    background-color: #29c92b;
+    color: rgb(255, 253, 253);
+    border: 1px solid #2fe932;
+    margin-right:25px;
+    border-radius:70px;
+}
+
+.btns-ghost:link,
+.btns-ghost:visited{
+    border:1px solid #2fe932;
+    color: #2fe932;
+}
+
+.btns-full:hover,
+.btns-full:active {
+  background-color: #167417;
+  color: #fff;
+  border: 1px solid #167417;
+}
+
+.btns-ghost:hover,
+.btns-ghost:active {
+  background-color: #167417;
+  color: #fff;
+  border: 1px solid #167417;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+}
+
+.company-name {
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.nav-links-container {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: border-bottom 0.3s;
+}
+
+.nav-links li a:hover {
+    border-bottom: 2px solid #2fe932;
+}
+
+.rowed{
+    display: flex;
+}
+
+.col{
+    margin-right:50px;
+}
+
+section{
+    padding: 80px 0;
+}
+
+h2{
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 180%;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-align:  center;
+    margin-bottom: 30px;
+}
+
+h2:after{
+    display:block;
+    height: 3px;
+    background-color: #21c924;
+    content:" ";
+    width: 100px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.long-copy{
+    text-align: center;
+    margin:30px;
+}
+
+.box{
+    padding: 1%;
+    
+}
+
+h3{
+    font-weight:300;
+    text-transform:uppercase;
+    font-size:110%;
+    margin-bottom:15px;
+}
+
+.box p{
+    font-size: 90%;
+    line-height:145%;
+}
+
+.icon-big{
+    font-size: 350%;
+    color: #21c924;
+}
+
+.meals-showcase{
+    list-style: none;
+    width:100%;
+
+}
+.meals-showcase li{
+    display: block;
+    width: 25%;
+    float:left;
+}
+.meal-pic{
+    width:100%;
+    margin:0;
+    overflow:hidden;
+    background-color: black;
+}
+
+.meal-pic img{
+    width:100%;
+    height: 250px;
+    transform: scale(1.15);
+    opacity: 0.7;
+}
+
+.meal-pic img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+    transition: all 0.9s;
+}
+
+.section-meals{
+    padding: 0;
+}
+
+.section-meals::after {
+    content: "";
+    display: table;
+    clear: both;
+}
