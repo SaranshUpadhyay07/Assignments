@@ -23,6 +23,7 @@ header{
     height:100vh;
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
     
 }
 
@@ -305,7 +306,7 @@ h3{
 
 .cities-header{
     display: flex;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 .city-pic{
     margin: 0 20px;
@@ -363,4 +364,54 @@ h3{
 .imp{
     padding-right:10px;
     color:#167417
+}
+
+.testimonials-header{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    
+}
+.customer-pic{
+    height:60px;
+    width: auto;
+    border-radius: 50%;
+}
+
+.customer-name{
+    color:#2ecd30
+}
+
+.section-testimonials{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/customer feedback.jpg");
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+.customer-review ,.customer-name{
+    font-style:italic;
+    line-height: 150%;
+    margin-top: 40px;
+}
+
+.customer-review{
+    font-size: 90%;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top:0;
+}
+
+.customer-info{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-left: 40px;
+}
+
+.double-qoute{
+    margin:0px;
+    font-size:250%;
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
 }
