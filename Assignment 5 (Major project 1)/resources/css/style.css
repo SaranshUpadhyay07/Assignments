@@ -63,13 +63,14 @@ h1{
     color: rgb(255, 253, 253);
     border: 1px solid #2fe932;
     margin-right:25px;
-    border-radius:70px;
+    border-radius:20px;
 }
 
 .btns-ghost:link,
 .btns-ghost:visited{
     border:1px solid #2fe932;
     color: #2fe932;
+    border-radius:20px;
 }
 
 .btns-full:hover,
@@ -363,7 +364,7 @@ h3{
 
 .imp{
     padding-right:10px;
-    color:#167417
+    color:#36ae38
 }
 
 .testimonials-header{
@@ -414,4 +415,66 @@ h3{
     font-size:250%;
     font-style: italic;
     font-family: 'Playfair Display', serif;
+}
+
+.plan-header{
+    display: flex;
+    width:100%;
+    justify-content: center;
+    margin-left: 17%;
+}
+.plan-box{
+    margin-top:50px;
+    background-color: #fff;
+    border-radius: 07px;
+    width:90%;
+    padding: 10px;
+}
+.plan-box ul{
+    list-style: none;
+    padding-left: 0;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+
+.plan-box div{
+    padding:0px 0px 15px 0px;
+
+    border-bottom:2px solid #e8e8e8;
+}
+.plan-heading{
+    margin-top:-20px
+}
+
+.plan-btn{
+    margin-top: 20px
+}
+
+.section-plans{
+    background-color:#f4f4f4
+}
+
+.plan-price{
+    font-size: 300%;
+    margin-bottom: 10px;
+    font-weight: 100;
+    color:#2ecd30;
+}
+
+.plan-price span{
+    font-size: 50%;
+    color:#2ecd30;
+    font-weight: 300;
+}
+
+.plan-box div:last-child{
+    border-bottom: none;
+    text-align: center;
+}
+
+.plan-box div:first-child{
+    background-color: #fcfcfc;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    padding:5px;
 }
