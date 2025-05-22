@@ -4,13 +4,15 @@
     box-sizing:border-box;
 }
 
-html{
+html,
+body{
     background-color:white;
     color: #939393;
     font-family: nunito;
     font-weight: 300;
     font-size: 20px;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
+    overflow-x:hidden;
 }
 
 .row{

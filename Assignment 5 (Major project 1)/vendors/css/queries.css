@@ -1,0 +1,140 @@
+/* big tablets > 1200px  */
+@media only screen and (max-width: 1200px) {
+    .hero-text-box {
+        width: 100%;
+        padding: 0 2%;
+    }
+    .row {
+        padding: 0 2%;
+    }
+    .cities-header, .plan-header {
+        width: 80%;
+    }
+    .contact-form {
+        width: 90%;
+        padding: 0 10px;
+    }
+}
+
+/* small tablets to big tablets from 767px to 1023px */
+@media only screen and (max-width: 1023px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 2%;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .hero-text-box h1 {
+        font-size: 2.2rem;
+    }
+    .section-features .rowed {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .meals-showcase {
+        flex-wrap: wrap;
+    }
+    .meals-showcase li {
+        width: 48%;
+        margin-bottom: 2%;
+    }
+    .cities-header, .plan-header {
+        flex-wrap: wrap;
+    }
+    .city-box, .plan-box {
+        width: 48%;
+        margin-bottom: 2%;
+    }
+    .footer-row {
+        flex-wrap: wrap;
+    }
+    .footer-col {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px;
+    }
+    .col, .span_1_of_3, .span_2_of_3 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .contact-form input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 18px;
+    }
+}
+
+/* small phones to small tablets 480px to 767px */
+@media only screen and (max-width: 767px) {
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 8px 1%;
+    }
+    .logo-img {
+        width: 40px;
+    }
+    .hero-text-box h1 {
+        font-size: 1.5rem;
+    }
+    .btns, .btns-full, .btns-ghost {
+        width: 100%;
+        margin-bottom: 10px;
+        font-size: 1rem;
+    }
+    .section-features h2, .section-meals h2, .section-steps h2, .section-cities h2, .section-testimonials h2, .section-plans h2, .section-form h2 {
+        font-size: 1.3rem;
+    }
+    .meals-showcase li, .city-box, .plan-box, .footer-col {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* small phones from 0 to 480px */
+@media only screen and (max-width: 480px) {
+    .navbar, .nav-links, .footer-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .logo-img {
+        width: 32px;
+    }
+    .hero-text-box h1 {
+        font-size: 1.1rem;
+    }
+    .btns, .btns-full, .btns-ghost {
+        font-size: 0.95rem;
+        padding: 10px 0;
+    }
+    .section-features h2, .section-meals h2, .section-steps h2, .section-cities h2, .section-testimonials h2, .section-plans h2, .section-form h2 {
+        font-size: 1rem;
+    }
+    .meals-showcase li, .city-box, .plan-box, .footer-col {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .footer-logo {
+        width: 60px;
+    }
+    .footer-company {
+        font-size: 0.9rem;
+    }
+    .contact-form input, .contact-form textarea {
+        font-size: 1rem;
+    }
+}
