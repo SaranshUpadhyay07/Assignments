@@ -489,7 +489,7 @@ input[type=text],
 input[type=email],
 select,
 textarea{
-    width: 120%;
+    width: 100%;
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #ccc
@@ -515,3 +515,72 @@ input[type=submit]:hover{
     border-color:#189c1b ;
 }
 
+.section-form{
+    margin-bottom:35%;
+}
+
+footer{
+    background-color:#333;
+    font-size: 80%;
+    padding: 50px;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left; 
+}
+
+.footer-social{
+    list-style: none;
+    float:right;
+}
+
+.footer-nav li,
+.footer-social li{
+    display:inline;
+    margin-right:30px;
+}
+
+.footer-nav li a:link,
+.footer-social li a:visited,
+.footer-social li a:link,
+.footer-nav li a:visited{
+    text-decoration: none;
+    border:0;
+    color:#888;
+}
+
+.footer-nav li a:hover,
+.footer-social li a:hover{
+    color:#ddd;   
+}
+
+.footer-copyright{
+    color:#888;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 7%;
+}
+
+.fbk,
+.inst,
+.twtr,
+.ggl{
+    font-size:160%;
+}
+
+.fbk:hover{
+    color: #3b5998;
+}
+
+.ggl:hover{
+    color:#dd4b39
+}
+
+.twtr:hover{
+    color: #00aced;
+}
+
+.inst:hover{
+    color:#f41cb0;
+}
