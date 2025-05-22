@@ -49,7 +49,8 @@ h1{
 }
 
 .btns:link,
-.btns:visited{
+.btns:visited,
+input[type=submit]{
     display:inline-block;
     padding: 10px 30px;
     text-decoration: none;
@@ -74,7 +75,7 @@ h1{
 }
 
 .btns-full:hover,
-.btns-full:active {
+.btns-full:active{
   background-color: #167417;
   color: #fff;
   border: 1px solid #167417;
@@ -478,3 +479,39 @@ h3{
     border-top-right-radius:5px;
     padding:5px;
 }
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 120%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #ccc
+}
+
+textarea{
+    height: 100%;
+}
+input[type=checkbox]{
+    margin:10px 5px 10px 0px;
+}
+
+input[type=submit]{
+    border-radius: 10px;
+    background-color: #2ecd30;
+    color:#ffffff;
+    border-color:#2ecd30 ;
+}
+
+input[type=submit]:hover{
+    background-color: #189c1b;
+    color:#f4f4f4;
+    border-color:#189c1b ;
+}
+
