@@ -6,6 +6,7 @@
     <title>Omnifood</title>
     <link rel="stylesheet" href="resources/css/style.css">
     <link rel="stylesheet" href="vendors/css/4cols.css">
+    <link rel="stylesheet" href="vendors/css/2cols.css">
     <link rel="stylesheet" href="vendors/css/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,7 +67,7 @@
             </div>
     </section>
     <section class="section-meals">
-        <ul class="meals-showcase">
+        <ul class="meals-showcase clearfix">
             <li>
                 <figure class="meal-pic">
                     <img src="resources/img/dish 1.jpeg" alt="Meal 1">
@@ -88,7 +89,7 @@
                     </figure>
             </li>
         </ul>
-         <ul class="meals-showcase">
+         <ul class="meals-showcase clearfix">
             <li>
                 <figure class="meal-pic">
                     <img src="resources/img/dish 5.jpg" alt="Meal 5">
@@ -111,7 +112,33 @@
             </li>
         </ul>
 
-    </section><br><br>
+    </section>
+    <section class="section-steps">
+        <div class="row ">
+            <h2>How it works &mdash; Simple as 1,2,3</h2>
+        </div>
+        <div class="row steps-header">
+            <div class="col span_1_of_2 step-box">
+                <img class="phone" src="resources/img/phone.png" alt="phone"/>
+            </div>
+            <div class="col span_1_of_2 step-box">
+                <div class="work-step">
+                    <div>1</div>
+                    <p>Chose plan that fits you and Sign up today</p>
+                </div>
+                <div class="work-step">
+                    <div>2</div>
+                    <p>Pay for the plan and download the app</p>
+                </div>
+                <div class="work-step">
+                    <div>3</div>
+                    <p>Start Ordering !!</p>
+                </div>
+                <a href="#" class="btn-app"><img src="resources/img/appstore.png" alt="Appstore"></a>
+                <a href="#" class="btn-app"><img src="resources/img/playstore.png" alt="Playstore"></a>
+            </div>
+        </div>
+    </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

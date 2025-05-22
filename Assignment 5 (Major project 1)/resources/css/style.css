@@ -226,6 +226,15 @@ h3{
     transition: all 0.9s;
 }
 
+.clearfix{zoom:1}
+.clearfix::after{
+    content: ' ';
+    clear:both;
+    display: block;
+    height:0;
+    visibility: hidden;
+}
+
 .section-meals{
     padding: 0;
 }
@@ -234,4 +243,62 @@ h3{
     content: "";
     display: table;
     clear: both;
+}
+
+.work-step{
+    margin-bottom: 50px;
+    margin-right: 25px;
+}
+.step-box:first-child{
+    text-align: center;
+    margin-top: 30px;
+    padding-right: 3%;
+    
+}
+
+.step-box:last-child{
+    padding-left: 3%;
+    margin-top: 70px;
+}
+.step-box{
+    diplay: inline-block
+}
+
+.steps-header{
+    display: flex;
+}
+
+.phone{
+    border-radius: 30px;
+    width: 50%;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+
+.work-step div{
+    color:#29c92b;
+    border: 4px solid #29c92b;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float:left;
+    font-size: 150%;
+    margin-right: 20px;
+}
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+.work-step:last-of-type{
+    margin-bottom: 80px;;
+}
+
+.section-steps{
+    background-color: #f4f4f4;
 }
