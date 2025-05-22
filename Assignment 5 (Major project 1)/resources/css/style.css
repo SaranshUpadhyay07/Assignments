@@ -302,3 +302,65 @@ h3{
 .section-steps{
     background-color: #f4f4f4;
 }
+
+.cities-header{
+    display: flex;
+    margin-bottom: 50px;
+}
+.city-pic{
+    margin: 0 20px;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+.city-pic img {
+    width: 300px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.city-pic img:hover{
+    transform: scale(1.03);
+    opacity: 1;
+    transition: all 0.9s;
+}
+.city-box h3{
+    font-size: 110%;
+    font-weight: 300;
+    margin-top: 10px;
+    color:#29c92b;
+    text-decoration: dotted underline;
+}
+.city-box p{
+    font-size: 90%;
+    line-height: 145%;
+    text-align: center;
+}
+
+.city-box ul {
+        list-style-type: none;
+        padding-left: 0;
+        
+}
+
+.city-box {
+    display: flex;
+    flex-direction: column;  /* stacks children vertically */
+    align-items: center;     /* centers items horizontally */
+}
+
+.city-info{
+    border: 2px solid #08a60b;
+    padding: 40px;
+    margin-top:20px;
+    border-radius: 10px;
+}
+
+.city-info a{
+    color:#08a60b
+}
+
+.imp{
+    padding-right:10px;
+    color:#167417
+}
