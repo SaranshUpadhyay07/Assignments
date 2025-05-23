@@ -27,6 +27,12 @@
     max-width: 900px;
     width: 95%;
   }
+  .section-plans{
+    margin-left:0%;
+}
+.plan-heading{
+    padding-left:0%;
+}
 
   .meals-showcase li {
     width: 50%;
@@ -41,6 +47,7 @@
   }
   .plan-box {
     width: 95%;
+    margin-left:10%;
   }
 
   #nav-links{
@@ -155,6 +162,7 @@
     width: 100%;
     padding: 0 10px;
   }
+
   header {
     background-attachment: scroll;
     min-height: 400px;
@@ -304,6 +312,12 @@
     background-color:#333;
     font-size: 85%;
     padding-top:60px;
+}
+   .section-plans{
+    margin-left:-10%;
+}
+.plan-heading{
+    padding-left:12%;
 }
 }
 
