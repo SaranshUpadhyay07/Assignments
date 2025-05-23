@@ -133,7 +133,7 @@ input[type=submit]{
     text-decoration: none;
     color: white;
     font-weight: 500;
-    transition: border-bottom 0.3s;
+    transition: border-bottom 0.2s;
 }
 
 .nav-links li a:hover {
