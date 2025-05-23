@@ -22,4 +22,8 @@ $(document).ready(function(){
       });
     } // End if
   });
+
+  $('#hamburger').on('click', function() {
+    $('#nav-links').toggleClass('open');
+    });
 });

@@ -152,7 +152,22 @@
   .section-form{
     margin-bottom:40%;
 }
-
+.nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* Adjust based on navbar height */
+    right: 20px;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 100;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .hamburger {
+    display: flex;
+  }
 }
 
 /* ----------- Mobile Devices (max-width: 600px) ----------- */

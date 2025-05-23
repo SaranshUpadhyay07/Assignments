@@ -586,4 +586,18 @@ footer{
 .inst:hover{
     color:#f41cb0;
 }
-
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+  justify-content: space-between;
+}
+.hamburger span {
+  height: 4px;
+  width: 100%;
+  background: white;
+  border-radius: 2px;
+  display: block;
+}
