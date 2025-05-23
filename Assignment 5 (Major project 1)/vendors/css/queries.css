@@ -1,4 +1,7 @@
-@media (max-width: 800px) {
+/* queries.css: Responsive Media Queries */
+
+/* ----------- Tablets (max-width: 1024px) ----------- */
+@media (max-width: 1024px) {
   .row, .hero-text-box {
     max-width: 900px;
     width: 95%;
@@ -21,91 +24,6 @@
   .plan-box {
     width: 95%;
   }
-  /* .undo{
-    display:none;
-  } */
-  .form-header{
-    width:80%;
-    
-  }
-  input[type=text],
-  input[type=email],
-  select,
-  textarea{
-    width: 80%;
-    height:auto;
-    padding: 0px;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-    margin-top:0px;
-  }
-  .form-header{
-    padding:0%;
-    margin:0%;
-  }
-  #ta{
-    height: 100px;
-  }
-  .section-form{
-    margin-bottom:140%;
-}
- .city-info{
-    width:80%;
-    margin-left:11%;
-    margin-bottom:5%;
-    padding:2%;
-  }
-  .meal-pic img{
-    height:40%;
-  }
-  .box{
-    font-size:90%;
-}
-#nav-links{
-    font-size:70%;
-    margin-top:15px;
-    margin-right:10%;
-}
-.long-copy{
-    margin:10px;
-}
-.step-box{
-    font-size:75%;
-}
-.work-step div{
-    color:#29c92b;
-    border: 4px solid #29c92b;
-    display: inline-block;
-    border-radius: 50%;
-    height: 40px;
-    width: 40px;
-    text-align: center;
-    padding: 5px;
-    float:left;
-    font-size: 100%;
-    margin-right: 10px;
-}
-.btn-app img{
-    height: 40px;
-    width: auto;
-    margin-right: 10px;
-    border-radius: 10px;
-    margin-top:0%;
-}
-.work-step:last-of-type{
-    margin-bottom: 40px;;
-}
-.phone{
-    border-radius: 10px;
-    margin-top:25%;
-    width: 80%;
-    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
-}
-  footer{
-    background-color:#333;
-    font-size: 85%;
-    padding-top:60px;
-}
 }
 
 /* ----------- Mobile Devices (max-width: 600px) ----------- */
@@ -180,6 +98,91 @@
     margin: 5px 0;
     display: block;
   }
+  /* .undo{
+    display:none;
+  } */
+  .form-header{
+    width:80%;
+    
+  }
+  input[type=text],
+  input[type=email],
+  select,
+  textarea{
+    width: 80%;
+    height:auto;
+    padding: 0px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-top:0px;
+  }
+  .form-header{
+    padding:0%;
+    margin:0%;
+  }
+  #ta{
+    height: 100px;
+  }
+  .section-form{
+    margin-bottom:140%;
+}
+ .city-info{
+    width:80%;
+    margin-left:11%;
+    margin-bottom:5%;
+    padding:2%;
+  }
+  .meal-pic img{
+    height:60%;
+  }
+  .box{
+    font-size:90%;
+}
+#nav-links{
+    font-size:70%;
+    margin-top:15px;
+    margin-right:10%;
+}
+.long-copy{
+    margin:10px;
+}
+.step-box{
+    font-size:75%;
+}
+.work-step div{
+    color:#29c92b;
+    border: 4px solid #29c92b;
+    display: inline-block;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding: 5px;
+    float:left;
+    font-size: 100%;
+    margin-right: 10px;
+}
+.btn-app img{
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-top:0%;
+}
+.work-step:last-of-type{
+    margin-bottom: 40px;;
+}
+.phone{
+    border-radius: 10px;
+    margin-top:25%;
+    width: 80%;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.3);
+}
+  footer{
+    background-color:#333;
+    font-size: 85%;
+    padding-top:60px;
+}
 }
 
 /* ----------- Small Mobile Devices (max-width: 400px) ----------- */
@@ -206,7 +209,7 @@
   }
   .form-header{
     width:80%;
-
+    
   }
   input[type=text],
   input[type=email],
@@ -275,8 +278,5 @@
 }
 .long-copy{
     margin:10px;
-}
-.meal-pic img{
-    height:20%;
 }
 }
