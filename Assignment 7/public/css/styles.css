@@ -1,0 +1,43 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../images/old-fashion-steel-fountain-pen-paper-page_184700-1460.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow-x: hidden;
+}
+
+.the-list {
+  padding: 20px;
+  text-align: center;
+  width: 50%;
+  margin-top: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 0.5px solid white;
+  border-radius: 20px;
+  box-shadow: 8px 8px 15px rgb(13, 62, 22),
+              -8px -8px 15px rgb(0, 38, 15);
+  background-color: rgba(0, 0, 0, 0.3); /* Optional for contrast */
+  height:70%;
+}
+
+.done{
+    text-decoration: line-through;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+  margin-bottom: 5%;
+}
+
+.item p {
+  margin-left: 10%;
+}
