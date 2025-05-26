@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const port = process.env.PORT || 5023;
 
 var app = express();
 
@@ -19,6 +20,6 @@ app.post('/', function(req,res){
     res.redirect("/")
 })
 
-app.listen(5023, function(){
+app.listen(port, function(){
     console.log("Server started");
 });
