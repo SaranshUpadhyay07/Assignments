@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-     overflow: hidden;
+    overflow: hidden;
 }
 
 body {
@@ -56,8 +56,67 @@ body {
     font-family: 'Arial', sans-serif;
     text-align: center;
 }
- @media (min-width:1024px) {
+
+.priority {
+    width: 25px;
+    height: 25px;
+}
+
+.all {
+    width: 30px;
+    height: 25px;
+}
+
+.priority-text {
+    font-size: 60%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red {
+    background-color: rgb(141, 3, 3) !important;
+    border-color: rgb(141, 3, 3) !important;
+}
+
+.yellow {
+    background-color: rgb(181, 145, 5) !important;
+    border-color: rgb(181, 145, 5) !important;
+}
+
+.green {
+    background-color: rgb(25, 119, 2) !important;
+    border-color: rgb(25, 119, 2) !important;
+}
+
+.filter {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10%;
+    margin-top: 15px;
+}
+
+.filter-text {
+    border: 0.5px solid white;
+    padding: 8px;
+    border-radius: 8px;
+    background: rgba(0, 0, 0, 0.2);
+    font-size: 0.8em;
+    margin-right: 30px;
+}
+
+.filter-options {
+    font-size: 70%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (min-width: 1024px) {
     .the-list {
         margin-top: 5%;
-    }  
- }
+    }
+}
