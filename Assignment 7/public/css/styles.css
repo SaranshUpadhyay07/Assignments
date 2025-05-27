@@ -245,6 +245,14 @@ body {
         width: 35px;
         height: 25px;
     }
+    .task-box{
+        flex-direction: column;
+        align-items: flex-end;
+        height:110px;
+    }
+    .del{
+        margin-right:12px;
+    }
 }
 
 /* Small devices (Mobile phones) */
@@ -253,5 +261,14 @@ body {
         width: 90%;
         margin-top: 20%;
         padding: 15px;
+    }
+
+    .task-box{
+        flex-direction: column;
+        align-items: flex-end;
+        height:110px;
+    }
+    .del{
+        margin-right:10px;
     }
 }
