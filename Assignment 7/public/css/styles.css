@@ -116,6 +116,54 @@ body {
     gap: 5px;
 }
 
+.edit-btn.green {
+    background: #28a745;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.edit-btn.green:hover {
+    background: #218838;
+}
+.edit-btn.red {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s;
+}
+.edit-btn.red:hover {
+    background: #b21f2d;
+}
+.edit-text {
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 6px 10px;
+    outline: none;
+    transition: border 0.2s;
+}
+.edit-text:focus {
+    border: 1.5px solid #007bff;
+}
+.task-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f9f9f9;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+}
+
+
 @media (max-width: 1300px){
   .the-list {
         width: 70%;
