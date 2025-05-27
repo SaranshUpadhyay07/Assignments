@@ -179,6 +179,11 @@
     width: 100%;
     padding: 0px;
   }
+  .row, .hero-text-box, .container {
+    padding-left: 3vw;
+    padding-right: 3vw;
+    /* Or use padding: 0 5vw; */
+  }
   .hero-text-box{
     padding-left:5%;
     /* padding-right:10%; */
