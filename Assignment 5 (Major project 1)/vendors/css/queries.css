@@ -34,6 +34,22 @@
     padding-left:0%;
 }
 
+ .footer .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer .col {
+        width: 100%;
+        text-align: center;
+        margin: 18px 0;
+    }
+    .footer-nav,
+    .footer-social {
+        justify-content: center;
+        gap: 18px;
+        flex-direction: row;
+    }
+
   .meals-showcase li {
     width: 50%;
   }
@@ -373,6 +389,37 @@
     margin-left:85%;
     margin-top:-11%;
   }
+
+  .footer {
+        padding: 28px 0 14px 0;
+        font-size: 90%;
+    }
+    .footer-nav,
+    .footer-social {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-nav li,
+    .footer-social li {
+        margin: 5px 0;
+        display: block;
+    }
+    .footer-nav li a {
+        font-size: 0.98rem;
+        padding: 3px 0;
+    }
+    .footer-social li a {
+        width: 32px;
+        height: 32px;
+    }
+    .footer-social ion-icon {
+        font-size: 18px;
+    }
+    .footer-copyright {
+        font-size: 13px;
+        margin-top: 18px;
+    }
 }
 
 
@@ -500,4 +547,19 @@
   .company-name{
     font-size:80%;
   }
+
+   .footer {
+        font-size: 65%;
+        padding-top: 20px;
+    }
+    .footer-nav li a {
+        font-size: 0.92rem;
+    }
+    .footer-social li a {
+        width: 28px;
+        height: 28px;
+    }
+    .footer-social ion-icon {
+        font-size: 16px;
+    }
 }
