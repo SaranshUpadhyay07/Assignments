@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="to-do">
+            <div>
+                <h2>To-Do List</h2>
+            </div>
+            <div class="accordion filters" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Filters
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <form action="/high" method="post">
+                                <button type="submit" class="h">High</button>
+                            </form>
+                            <form action="/medium" method="post">
+                                <button type="submit" class="m">Medium</button>
+                            </form>
+                            <form action="/low" method="post">
+                                <button type="submit" class="l">Low</button>
+                            </form>
+                            <form action="/none" method="post">
+                                <button type="submit" class="none">None</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <% dayej.forEach(function(items){ %>
+                        <form action="/delete" method="post">
+                            <div class="item">
+                                <input type="checkbox" name="checkbox1" onchange="this.form.submit()" value="<%= items._id %>" class="done"/>
+                                <p><%= items.name %></p>
+                                <button type="button" class="btn btn-secondary btn-sm edit-btn" data-id="<%= items._id %>">Edit</button>
+                            </div>
+                        </form>
+                        <div class="editing">
+                            <form action="/update" method="post" class="update-form" id="update-form-<%= items._id %>" style="display:none;">
+                                <input type="hidden" name="id" value="<%= items._id %>">
+                                <input type="text" name="updatedTask" value="<%= items.name %>">
+                                <button type="submit" class="btn btn-success btn-sm">Save</button>
+                                <button type="button" class="btn btn-danger btn-sm cancel-btn" data-id="<%= items._id %>">Cancel</button>
+                            </form>
+                        </div>
+                    <% }) %>
+                </div>
+                <div class="form">
+                    <form class="item enter" action="/" method="post">
+                        <input type="text" name="ele1" placeholder="Enter the task" id="task">
+                        <button type="submit" id="add-btn">Add</button>
+                        <button type="submit" id="high-btn" class="btn btn-primary priority red" name="priority" value="high">
+                            <div class="high priority-text">H</div>
+                        </button>
+                        <button type="submit" id="mid-btn" class="btn btn-primary priority yellow" name="priority" value="medium">
+                            <div class="medium priority-text">M</div>
+                        </button>
+                        <button type="submit" id="low-btn" class="btn btn-primary priority green" name="priority" value="low">
+                            <div class="low priority-text">L</div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#add-btn").click(function (event) {
+            if ($("#task").val().trim() === "") {
+                event.preventDefault();
+                alert("Please enter a task before adding it to the list.");
+            }
+        });
+        $("#high-btn").click(function (event) {
+            if ($("#task").val().trim() === "") {
+                event.preventDefault();
+                alert("Please enter a task before adding it to the list.");
+            }
+        });
+        $("#low-btn").click(function (event) {
+            if ($("#task").val().trim() === "") {
+                event.preventDefault();
+                alert("Please enter a task before adding it to the list.");
+            }
+        });
+        $("#mid-btn").click(function (event) {
+            if ($("#task").val().trim() === "") {
+                event.preventDefault();
+                alert("Please enter a task before adding it to the list.");
+            }
+        });
+        $('.done').click(function (event) {
+            alert("Task Completed 🥳");
+        });
+        $(document).ready(function() {
+            $('.edit-btn').click(function() {
+                const id = $(this).data('id');
+                $('#task-text-' + id).hide();
+                $(this).hide();
+                $('#update-form-' + id).show();
+            });
+
+            $('.cancel-btn').click(function() {
+                const id = $(this).data('id');
+                $('#task-text-' + id).show();
+                $('.edit-btn[data-id="' + id + '"]').show();
+                $('#update-form-' + id).hide();
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</body>
+</html>
