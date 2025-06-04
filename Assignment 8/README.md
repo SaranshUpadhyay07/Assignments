@@ -10,9 +10,10 @@ The application leverages **MongoDB Atlas** as its NoSQL database. This choice a
 
 ## Technologies Used
 
-* [List your frontend technologies here, e.g., HTML, CSS, JavaScript, React, Vue.js, etc.]
-* [List your backend technologies here, e.g., Node.js, Express.js, Python, Flask, etc.]
-* **MongoDB Atlas** (Database)
+ * Frontend: HTML, CSS, Bootstrap, JavaScript,ejs
+ * Backend: Node.js, Express.js
+ * Database: MongoDB Atlas
+
 
 
 
