@@ -1,0 +1,85 @@
+body{
+    background-color: rgba(33,37,41,255);
+    min-height: 100vh;         /* Ensure body is at least full viewport height */
+  display: flex;             /* Enable flexbox layout */
+  flex-direction: column;    /* Stack children vertically */
+  margin: 0;
+}
+
+.main, .login{
+    border-radius: 10px;
+    padding:15px;
+    box-shadow: 4px 4px 5px rgb(79, 77, 77),
+    -4px -4px 5px rgb(52, 51, 51);
+    transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), box-shadow 0.4s cubic-bezier(0.4,0,0.2,1);
+    margin:20px;
+}
+.btn{
+    margin-right:10px;
+    background-color: rgb(86, 123, 155);
+    border-color: rgb(86, 123, 155);
+}
+.btn:hover{
+    background-color: rgb(51, 78, 103);
+    border-color: rgb(51, 78, 103);
+}
+.btn:active{
+    background-color: rgb(51, 78, 103) !important;
+    border-color: rgb(51, 78, 103) !important;
+}
+.login{
+    width:60%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+ .login:hover{
+     transform: scale(1.03);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);         
+}
+.footer{
+        margin-top: auto;          /* Push footer to the bottom */
+        padding: 1rem;
+        text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+    width:100%
+}
+.main{
+    width:100%;
+    text-align: center;
+}
+.login-btn{
+    background-color:rgba(33,37,41,255);
+    border-color: aliceblue;
+}
+#pass-alert{
+    background-color: rgb(237, 66, 66);
+    border-color: rgb(237, 66, 66);
+    color:black;
+}
+.toggle{
+    display: flex;
+    gap:10px;
+}
+.t-icons{
+    font-size: large;
+    margin-top:10px;
+}
+.t-icons ion-icon:hover{
+    cursor: pointer;
+}
+.logout{
+    margin-top:10px;
+}
+#upt-secret{
+    margin-top:20px;
+}
+#update-secret{
+    margin-top:10px;
+}

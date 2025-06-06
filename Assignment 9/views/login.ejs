@@ -1,0 +1,32 @@
+<%- include('partials/header')%>
+    <div class="login bg-dark text-light ">
+        <form action="/login" method="post">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Password</label>
+    <div class="toggle">
+    <input type="password" class="form-control" id="password" name="password">
+    <div class="toggle t-icons"><div id="show"><ion-icon name="eye-outline"></ion-icon></div><div id="noshow" class="d-none"><ion-icon name="eye-off-outline" ></ion-icon></div></div>
+  </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Login</button>
+</form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      $("#show").on("click",function(){
+      $("#show").toggleClass("d-none");
+      $("#noshow").toggleClass("d-none");
+      $("#password").attr("type", "text");
+    });
+    $("#noshow").on("click",function(){
+      $("#show").toggleClass("d-none");
+      $("#noshow").toggleClass("d-none");
+      $("#password").attr("type", "password");
+    })
+    </script>
+<%- include('partials/footer')%>
