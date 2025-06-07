@@ -46,7 +46,7 @@
                         <form action="/delete" method="post">
                             <div class="item">
                                 <input type="checkbox" name="checkbox1" onchange="this.form.submit()" value="<%= items._id %>" class="done"/>
-                                <p><%= items.name %></p>
+                                <p><%= items.name %></p><p class="priority-para">Priortity:<%= items.priority %></p>
                                 <button type="button" class="btn btn-secondary btn-sm edit-btn" data-id="<%= items._id %>">Edit</button>
                             </div>
                         </form>
@@ -65,7 +65,7 @@
                         <input type="text" name="ele1" placeholder="Enter the task" id="task">
                         <button type="submit" id="add-btn">Add</button>
                         <button type="submit" id="high-btn" class="btn btn-primary priority red" name="priority" value="high">
-                            <div class="high priority-text">H</div>
+                            <div class="high priority-text ">H</div>
                         </button>
                         <button type="submit" id="mid-btn" class="btn btn-primary priority yellow" name="priority" value="medium">
                             <div class="medium priority-text">M</div>
@@ -79,49 +79,44 @@
         </div>
     </div></div>
     <script>
-        $("#add-btn").click(function (event) {
-            if ($("#task").val().trim() === "") {
-                event.preventDefault();
-                alert("Please enter a task before adding it to the list.");
-            }
-        });
-        $("#high-btn").click(function (event) {
-            if ($("#task").val().trim() === "") {
-                event.preventDefault();
-                alert("Please enter a task before adding it to the list.");
-            }
-        });
-        $("#low-btn").click(function (event) {
-            if ($("#task").val().trim() === "") {
-                event.preventDefault();
-                alert("Please enter a task before adding it to the list.");
-            }
-        });
-        $("#mid-btn").click(function (event) {
-            if ($("#task").val().trim() === "") {
-                event.preventDefault();
-                alert("Please enter a task before adding it to the list.");
-            }
-        });
-        $('.done').click(function (event) {
-            alert("Task Completed 🥳");
-        });
-        $(document).ready(function() {
-            $('.edit-btn').click(function() {
-                const id = $(this).data('id');
-                $('#task-text-' + id).hide();
-                $(this).hide();
-                $('#update-form-' + id).show();
-            });
+  $(document).ready(function () {
+    // Prevent submitting empty task
+    function validateInput(event) {
+      if ($("#task").val().trim() === "") {
+        event.preventDefault();
+        alert("Please enter a task before adding it to the list.");
+      }
+    }
 
-            $('.cancel-btn').click(function() {
-                const id = $(this).data('id');
-                $('#task-text-' + id).show();
-                $('.edit-btn[data-id="' + id + '"]').show();
-                $('#update-form-' + id).hide();
-            });
-        });
-    </script>
+    // Bind validation to all relevant buttons
+    $("#add-btn").click(validateInput);
+    $("#high-btn").click(validateInput);
+    $("#mid-btn").click(validateInput);
+    $("#low-btn").click(validateInput);
+
+    // Task completed alert
+    $(".done").click(function () {
+      alert("Task Completed 🥳");
+    });
+
+    // Handle edit click
+    $(".edit-btn").click(function () {
+      const id = $(this).data("id");
+      $("#task-text-" + id).hide();
+      $(this).hide();
+      $("#update-form-" + id).show();
+    });
+
+    // Handle cancel click
+    $(".cancel-btn").click(function () {
+      const id = $(this).data("id");
+      $("#task-text-" + id).show();
+      $('.edit-btn[data-id="' + id + '"]').show();
+      $("#update-form-" + id).hide();
+    });
+  });
+</script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
 </html>

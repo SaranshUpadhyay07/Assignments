@@ -36,10 +36,10 @@ app.post("/", async function(req, res) {
     let priorityValue = "none";
 
     switch (priority) {
-        case "high": priorityValue = "H"; break;
-        case "medium": priorityValue = "M"; break;
-        case "low": priorityValue = "L"; break;
-        default: priorityValue = "none";
+        case "high": priorityValue = "High"; break;
+        case "medium": priorityValue = "Medium"; break;
+        case "low": priorityValue = "Low"; break;
+        default: priorityValue = "";
     }
 
     try {

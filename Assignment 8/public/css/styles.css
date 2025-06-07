@@ -113,6 +113,10 @@ body {
             margin-bottom:2%;
         }
 
+        .priority-para{
+            text-align: left;
+        }
+
         @media (max-width: 600px) {
     .form .item {
         flex-direction: column;
