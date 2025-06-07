@@ -51,11 +51,18 @@ app.post("/login",function(req,res){
     const username = req.body.email;
     const password = req.body.password;
     item.findOne({email:username}).then(function(user){
-        if(user.password === password){
+        if(!user) {
+            // User not found
+            res.render("login", { error: "Invalid email or password" });
+        } else if(user.password === password){
             res.render("secrets", { user });
+        } else {
+            // Wrong password
+            res.render("login", { error: "Invalid email or password" });
         }
     }).catch(function(err){
         console.log(err);
+        res.render("login", { error: "An error occurred. Please try again." });
     }) 
 })
 
