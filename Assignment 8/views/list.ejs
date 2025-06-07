@@ -80,7 +80,6 @@
     </div></div>
     <script>
   $(document).ready(function () {
-    // Prevent submitting empty task
     function validateInput(event) {
       if ($("#task").val().trim() === "") {
         event.preventDefault();
@@ -88,18 +87,15 @@
       }
     }
 
-    // Bind validation to all relevant buttons
     $("#add-btn").click(validateInput);
     $("#high-btn").click(validateInput);
     $("#mid-btn").click(validateInput);
     $("#low-btn").click(validateInput);
 
-    // Task completed alert
     $(".done").click(function () {
       alert("Task Completed 🥳");
     });
 
-    // Handle edit click
     $(".edit-btn").click(function () {
       const id = $(this).data("id");
       $("#task-text-" + id).hide();
@@ -107,7 +103,6 @@
       $("#update-form-" + id).show();
     });
 
-    // Handle cancel click
     $(".cancel-btn").click(function () {
       const id = $(this).data("id");
       $("#task-text-" + id).show();
