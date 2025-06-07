@@ -74,7 +74,7 @@ app.post("/delete", async function(req, res) {
 
 app.post("/high", async function(req,res){
      try {
-        const highitem = await item.find({priority:"H"});
+        const highitem = await item.find({priority:"High"});
         res.render("list", { dayej: highitem });
     } catch (err) {
         console.error(err);
@@ -83,7 +83,7 @@ app.post("/high", async function(req,res){
 });
 app.post("/medium", async function(req,res){
      try {
-        const miditem = await item.find({priority:"M"});
+        const miditem = await item.find({priority:"Medium"});
         res.render("list", { dayej: miditem });
     } catch (err) {
         console.error(err);
@@ -92,7 +92,7 @@ app.post("/medium", async function(req,res){
 });
 app.post("/low", async function(req,res){
      try {
-        const lowitem = await item.find({priority:"L"});
+        const lowitem = await item.find({priority:"Low"});
         res.render("list", { dayej: lowitem });
     } catch (err) {
         console.error(err);
