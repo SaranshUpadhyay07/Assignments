@@ -1,6 +1,12 @@
 <%- include('partials/header')%>
+       
 <div class="login bg-dark text-light ">
-    <form action="/register" method="post">
+     <% if (typeof error !== 'undefined') { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% }%>
+    <form action="/login" method="post">
         <div class="mb-3">
             <label for="username" class="form-label">Your Name</label>
             <input type="text" class="form-control" id="username" required name="name">
@@ -34,7 +40,7 @@
         event.preventDefault(); 
     } else {
         $("#pass-alert").addClass("d-none");
-         alert("Register Successfully 🥳"); 
+        //  alert("Register Successfully 🥳"); 
     }
     });
      $("#show").on("click",function(){

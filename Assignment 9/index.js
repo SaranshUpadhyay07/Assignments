@@ -25,29 +25,49 @@ app.get("/",function(req,res){
     res.render("home");
 });
 app.get("/login", function(req,res){
-    res.render("login");
+    res.render("login",{ success: 'Welcome back' });
 });
 app.get("/register", function(req,res){
     res.render("register");
 });
-app.get("/logout",function(req,res){
+app.get("/home",function(req,res){
     res.render("home");
 });
 
-app.post("/register",function(req,res){
-    const newUser = new item({
-        name: req.body.name,
-        email: req.body.email,
-        password: req.body.password
-    });
-    newUser.save().then(function(){
-        res.render("login");
-    }).catch(function(err){
-        console.log(err);
-    })
+app.post("/login", function(req, res) {
+    const name = req.body.name;
+    const email = req.body.email;
+    const password = req.body.password;
+
+    item.findOne({ email: email })
+        .then(function(user) {
+            if (user) {
+                // User already exists
+                res.render("register", { error: "The user exists" });
+            } else {
+                // Create new user
+                const newUser = new item({
+                    name: name,
+                    email: email,
+                    password: password
+                });
+                newUser.save()
+                    .then(function() {
+                        res.render('login', { success: 'Register Successfully 🥳' });
+                    })
+                    .catch(function(err) {
+                        console.log(err);
+                    });
+            }
+        })
+        .catch(function(err) {
+            console.log(err);
+            res.render("register", { error: "An error occurred. Please try again." });
+        });
 });
 
-app.post("/login",function(req,res){
+
+app.post("/secret",function(req,res){
     const username = req.body.email;
     const password = req.body.password;
     item.findOne({email:username}).then(function(user){
