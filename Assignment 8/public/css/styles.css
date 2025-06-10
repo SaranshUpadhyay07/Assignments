@@ -116,6 +116,9 @@ body {
         .priority-para{
             margin-left:10px;
         }
+    .remove-form{
+        margin-left:10px;
+    }
 
         @media (max-width: 600px) {
     .form .item {

@@ -39,7 +39,7 @@ app.post("/", async function(req, res) {
         case "high": priorityValue = "High"; break;
         case "medium": priorityValue = "Medium"; break;
         case "low": priorityValue = "Low"; break;
-        default: priorityValue = "";
+        default: priorityValue = "None";break; 
     }
 
     try {
@@ -110,11 +110,26 @@ app.post("/none", async function(req,res){
 });
 
 app.post('/update', async (req, res) => {
-    const { id, updatedTask } = req.body;
-    await item.findByIdAndUpdate(id, { name: updatedTask });
+    const { id, updatedTask, updatedPriority } = req.body;
+    await item.findByIdAndUpdate(id, { 
+        name: updatedTask,
+        priority: updatedPriority
+    });
     res.redirect('/');
 });
 
+
+app.post("/remove", function(req, res) {
+    const id  = req.body.id;
+    item.findByIdAndDelete(id)
+        .then(function(deletedItem) {
+            res.redirect("/");
+        })
+        .catch(function(err) {
+            console.error(err);
+            res.status(500).send("Error deleting item");
+        });
+});
 app.listen("3000", function(){
     console.log("server is running ");
 })

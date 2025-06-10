@@ -43,18 +43,22 @@
             <div>
                 <div class="box">
                     <% dayej.forEach(function(items){ %>
-                        <form action="/delete" method="post">
                             <div class="item">
                                 <input type="checkbox" name="checkbox1" onchange="this.form.submit()" value="<%= items._id %>" class="done"/>
-                                <p><%= items.name %></p><p class="priority-para">Priortity:<%= items.priority %></p>
+                                <p class="name-para"><%= items.name %></p><p class="priority-para">Priortity:<%= items.priority %></p>
                                 <button type="button" class="btn btn-secondary btn-sm edit-btn" data-id="<%= items._id %>">Edit</button>
-                            </div>
+                        <form action="/remove" method="POST" style="display:inline;" class="remove-form">
+                            <input type="hidden" name="id" value="<%= items._id %>" >
+                            <button type="submit" class="btn btn-danger btn-sm del" class="remove">Delete</button>
                         </form>
+                        </div>
                         <div class="editing">
                             <form action="/update" method="post" class="update-form" id="update-form-<%= items._id %>" style="display:none;">
                                 <input type="hidden" name="id" value="<%= items._id %>">
                                 <input type="text" name="updatedTask" value="<%= items.name %>">
-                                <button type="submit" class="btn btn-success btn-sm">Save</button>
+                                <label for="updatedPriority">Update Priority:</label>
+                                <input type="text" name="updatedPriority" value="<%= items.priority %>">
+                                <button type="submit" class="btn btn-success btn-sm" class="saving">Save</button>
                                 <button type="button" class="btn btn-danger btn-sm cancel-btn" data-id="<%= items._id %>">Cancel</button>
                             </form>
                         </div>
@@ -93,8 +97,15 @@
     $("#low-btn").click(validateInput);
 
     $(".done").click(function () {
-      alert("Task Completed 🥳");
-    });
+    const $para = $(this).closest(".item").find(".name-para");
+    if ($para.css("text-decoration-line") === "line-through") {
+        $para.css("text-decoration", "none");
+        alert("Task is not completed yet.");
+    } else {
+        $para.css("text-decoration", "line-through");
+        alert("Task is completed 🥳.");
+    }
+});
 
     $(".edit-btn").click(function () {
       const id = $(this).data("id");
@@ -108,6 +119,21 @@
       $("#task-text-" + id).show();
       $('.edit-btn[data-id="' + id + '"]').show();
       $("#update-form-" + id).hide();
+    });
+
+    $(".remove-form").submit(function (event) {
+      alert("Task Deleted 😢");
+    });
+
+    $(document).ready(function () {
+    $(".update-form").on("submit", function (event) {
+        const priority = $(this).find('input[name="updatedPriority"]').val().trim().toLowerCase();
+        const allowed = ["high", "medium", "low", "none"];
+            if (!allowed.includes(priority)) {
+                alert("Priority must be High, Medium, Low, or None");
+                event.preventDefault(); 
+            }
+        });
     });
   });
 </script>
