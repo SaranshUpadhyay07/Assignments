@@ -24,6 +24,9 @@ const item = mongoose.model("second",trySchema);
 app.get("/",function(req,res){
     res.render("home");
 });
+app.get("/secret",function(req,res){
+    res.render("login",{ success: 'Welcome back' });
+});
 app.get("/login", function(req,res){
     res.render("login",{ success: 'Welcome back' });
 });
