@@ -7,7 +7,7 @@ A simple note-keeping web application built with **React**, designed to allow us
 
 You can deploy the app using **Netlify** or **Vercel**.  
 🟢 [Live Demo Link (Netlify)](https://dreamy-frangollo-84f148.netlify.app)
-🟢 [Live Demo Link (Vercel)](keepers-j5mqxo9s6-saransh-upadhyays-projects.vercel.app)
+🟢 [Live Demo Link (Vercel)](keepers-app-ten.vercel.app)
 
 🗂️ Project Structure
 
